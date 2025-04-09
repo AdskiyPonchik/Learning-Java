@@ -1,17 +1,16 @@
 //comments in Java
-
+package stepik;
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.security.MessageDigest;
-
+import stepik.Robot;
 /**
  * Ебать хуйня а не док строка
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        task2_4 task = new task2_4();
-        System.out.println(task2_4.test());
+        Robot robot = new Robot(0,0, Robot.Direction.UP);
+        Robot.moveRobot(robot, 3,0);
+        System.out.print(robot.getX());
+        System.out.print(robot.getY());
     }
 
     public static int leapYearCount(int year) {

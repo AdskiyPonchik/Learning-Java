@@ -1,3 +1,5 @@
+package stepik;
+
 public class task2_4 {
     public static String test() {
         String [] roles= {
