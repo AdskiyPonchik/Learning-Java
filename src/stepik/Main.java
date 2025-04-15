@@ -2,15 +2,13 @@
 package stepik;
 import java.math.BigInteger;
 import stepik.Robot;
+import java.util.function.DoubleUnaryOperator;
 /**
  * Ебать хуйня а не док строка
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        Robot robot = new Robot(0,0, Robot.Direction.UP);
-        Robot.moveRobot(robot, 3,0);
-        System.out.print(robot.getX());
-        System.out.print(robot.getY());
+        System.out.println(integrate(x->1, 0, 10));
     }
 
     public static int leapYearCount(int year) {
@@ -71,6 +69,16 @@ public class Main {
                 j++;
             }
         }
+        return result;
+    }
+
+    public static double integrate(DoubleUnaryOperator f, double a, double b) {
+        double h = (b-a)/1e7;
+        double result = 0;
+        for(int i=0; i < 1e7; i++){
+            result+=f.applyAsDouble(a+h/2+i*h);
+        }
+        result *=h;
         return result;
     }
 }
