@@ -4,6 +4,7 @@ package stepik;
 import java.util.Arrays;
 
 public class Main {
+
     public static boolean teilbarkeit_3(int betrag) {
         betrag = Math.abs(betrag);
         int sum = 0;
