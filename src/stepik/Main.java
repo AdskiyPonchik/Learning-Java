@@ -1,16 +1,23 @@
 //comments in Java
 package stepik;
 import java.math.BigInteger;
-import stepik.Robot;
 import java.util.function.DoubleUnaryOperator;
 /**
  * Ебать хуйня а не док строка
- */
+*/
 public class Main {
-    public static void main(String[] args) throws Exception {
-        System.out.println(integrate(x->1, 0, 10));
+    public static void main(String[] args) {
+        System.out.println(getCallerClassAndMethodName());
     }
+    public static String getCallerClassAndMethodName() {
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        if(stackTrace.length > 3){return stackTrace[3].getClassName() + "#" + stackTrace[3].getMethodName();}
+        return null;
+    }
+}
 
+
+/*
     public static int leapYearCount(int year) {
         if (year == 1) {
             return 0;
@@ -82,3 +89,4 @@ public class Main {
         return result;
     }
 }
+*/

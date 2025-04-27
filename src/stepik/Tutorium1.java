@@ -1,8 +1,6 @@
-package stepik;
-
 public class Tutorium1 {
-    private int value;
-    private String stringValue;
+    private final int value;
+    private final String stringValue;
     public static boolean usewords = false;
 
     public Tutorium1(int value, String stringValue) {
@@ -36,7 +34,7 @@ public class Tutorium1 {
         }
         return result;
     }
-    public int fromStringtoInt(){
+    public int fromStringToInt(){
         String[] parts = this.stringValue.split("\\s+");
         int number = 0;
         for(String part : parts){
@@ -107,7 +105,7 @@ public class Tutorium1 {
         Tutorium1.usewords = true;
         System.out.println(d);
         System.out.println(Tutorium1.divide_13(11));
-        System.out.println(d.fromStringtoInt());
+        System.out.println(d.fromStringToInt());
     }
 }
 
