@@ -1,4 +1,4 @@
-package aud;
+package aud.DoppelList;
 
 import java.util.NoSuchElementException;
 
@@ -376,7 +376,7 @@ public class DList<T> implements Iterable<T>,
      * for (T item : dlist.backwards()) { ... }
      * </code></pre>
      *
-     * @see aud.DList#backwards
+     * @see aud.DoppelList#backwards
      */
     public class Backwards implements Iterable<T> {
         DList<T> list_ = null;

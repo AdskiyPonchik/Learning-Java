@@ -1,5 +1,4 @@
-package aud;
-import aud.DList;
+package aud.DoppelList;
 
 public class MyDList<T> extends DList<T> {
     //-----------------------------------------------------------------//

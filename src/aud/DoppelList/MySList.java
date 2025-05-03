@@ -1,4 +1,4 @@
-package aud;
+package aud.DoppelList;
 import java.util.NoSuchElementException;
 
 public class MySList implements Iterable<Integer> {

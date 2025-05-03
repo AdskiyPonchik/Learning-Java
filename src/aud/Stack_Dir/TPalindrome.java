@@ -1,4 +1,4 @@
-package aud;
+package aud.Stack_Dir;
 //package Stack_Pali;
 
 public class TPalindrome {
