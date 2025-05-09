@@ -1,6 +1,4 @@
 package aud;
-
-
 import aud.util.Graphvizable;
 import aud.util.GraphvizDecorable;
 import aud.util.GraphvizDecorator;

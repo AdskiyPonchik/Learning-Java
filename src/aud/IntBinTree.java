@@ -5,8 +5,6 @@ import aud.util.*;          //to use DotViewer, SingleStepper
 
 import java.util.Iterator;
 
-import aud.BinaryTree;
-
 public class IntBinTree extends BinaryTree<Integer> {
     //---------------------------------------------------------------//
     public IntBinTree(int data) {
@@ -20,64 +18,83 @@ public class IntBinTree extends BinaryTree<Integer> {
 
     //---------------------------------------------------------------//
     public int height() {
-        // TODO: implement to return the height of the current (sub-)tree
-        int leftHeight = (left_ != null) ? getLeft().height() : 0;
-        int rightHeight = (right_ != null) ? right_.height() : 0;
+        // Если текущий узел пустой (null), высота равна 0
+        if (this == null) {
+            return 0;
+        }
+        IntBinTree leftchild = (IntBinTree) this.getLeft();
+        IntBinTree rightchild = (IntBinTree) this.getRight();
+        int leftHeight = (leftchild != null) ? leftchild.height() : 0;
+        int rightHeight = (rightchild != null) ? rightchild.height() : 0;
         return Math.max(leftHeight, rightHeight) + 1;
     }
 
+
     //---------------------------------------------------------------//
     public int maxSum() {
-        // TODO: implement to return bigger sum of the left/right subtree
-        return 0;
+        return maxPathSum(this);
+    }
+
+    int maxPathSum(IntBinTree root) {
+        if (root == null) {
+            return 0;
+        }
+        int maxleftPath = maxPathSum((IntBinTree) root.getLeft());
+        int maxrightPath = maxPathSum((IntBinTree) root.getRight());
+        return Math.max(maxleftPath, maxrightPath) + root.getData();
     }
 
     //---------------------------------------------------------------//
     public int maxPath() {
-        // TODO: implement to return the maximum sum of all possible paths
-        return 0;
+        return maxDepth(this);
+    }
+
+    private int maxDepth(IntBinTree root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = maxDepth((IntBinTree) root.getLeft());
+        int right = maxDepth((IntBinTree) root.getRight());
+        return Math.max(left, right) + root.getData();
     }
 
     //---------------------------------------------------------------//
     public static void main(String[] args) {
-        // Test 1: Single Node Tree
-        IntBinTree tree1 = new IntBinTree(10);
-        System.out.println("Height of tree1 (single node): " + tree1.height());  // Expected output: 1
+// Создаем корень дерева
+        IntBinTree root = new IntBinTree(-92);
+        root.setLeft(new IntBinTree(31));
+        root.setRight(new IntBinTree(-18));
+        root.getLeft().setLeft(new IntBinTree(28));
+        root.getLeft().setRight(new IntBinTree(66));
+        root.getRight().setLeft(new IntBinTree(-23));
+        root.getRight().setRight(new IntBinTree(18));
+        root.getLeft().getLeft().setLeft(new IntBinTree(9));
+        root.getLeft().getLeft().setRight(new IntBinTree(67));
+        root.getLeft().getRight().setLeft(new IntBinTree(-5));
+        root.getLeft().getRight().setRight(new IntBinTree(4));
+        root.getRight().getLeft().setLeft(new IntBinTree(52));
+        root.getRight().getLeft().setRight(new IntBinTree(42));
+        root.getRight().getRight().setLeft(new IntBinTree(17));
+        root.getRight().getRight().setRight(new IntBinTree(22));
+        root.getLeft().getLeft().getLeft().setLeft(new IntBinTree(4));
+        root.getLeft().getLeft().getLeft().setRight(new IntBinTree(40));
+        root.getLeft().getLeft().getRight().setRight(new IntBinTree(19));
+        root.getLeft().getRight().getLeft().setLeft(new IntBinTree(-34));
+        root.getLeft().getRight().getLeft().setRight(new IntBinTree(-15));
+        root.getRight().getRight().getRight().setRight(new IntBinTree(-30));
+        root.getLeft().getLeft().getLeft().getRight().setLeft(new IntBinTree(35));
+        root.getLeft().getRight().getLeft().getLeft().setRight(new IntBinTree(18));
+        root.getLeft().getRight().getLeft().getRight().setLeft(new IntBinTree(24));
+        root.getLeft().getLeft().getLeft().getRight().getLeft().setLeft(new IntBinTree(-50));
+        root.getLeft().getRight().getLeft().getRight().getLeft().setLeft(new IntBinTree(35));
 
-        // Test 2: Balanced Tree (3 nodes)
-        IntBinTree tree2 = new IntBinTree(10);
-        IntBinTree left2 = new IntBinTree(5);
-        IntBinTree right2 = new IntBinTree(15);
-        tree2.setLeft(left2);
-        tree2.setRight(right2);
-        System.out.println("Height of tree2 (balanced): " + tree2.height());  // Expected output: 2
+        System.out.println("Бинарное дерево создано:");
+        System.out.println("Корень: " + root.getData());
 
-        // Test 3: Unbalanced Tree (4 nodes)
-        IntBinTree tree3 = new IntBinTree(10);
-        IntBinTree left3 = new IntBinTree(5);
-        IntBinTree leftLeft3 = new IntBinTree(2);
-        tree3.setLeft(left3);
-        left3.setLeft(leftLeft3);
-        System.out.println("Height of tree3 (unbalanced): " + tree3.height());  // Expected output: 3
-
-        // Test 4: Larger Balanced Tree (5 nodes)
-        IntBinTree tree4 = new IntBinTree(10);
-        IntBinTree left4 = new IntBinTree(5);
-        IntBinTree right4 = new IntBinTree(15);
-        IntBinTree leftLeft4 = new IntBinTree(3);
-        IntBinTree rightRight4 = new IntBinTree(20);
-        tree4.setLeft(left4);
-        tree4.setRight(right4);
-        left4.setLeft(leftLeft4);
-        right4.setRight(rightRight4);
-        System.out.println("Height of tree4 (larger balanced): " + tree4.height());  // Expected output: 3
-
-        // Test 5: Empty Tree (null)
-        IntBinTree tree5 = null;
-        if (tree5 != null) {
-            System.out.println("Height of tree5 (empty): " + tree5.height());  // Expected output: 0 (this should not happen)
-        } else {
-            System.out.println("Tree5 is null, no height calculation.");
-        }
+        // Тестирование методов
+        System.out.println("Высота дерева: " + root.height());
+        System.out.println("Максимальная сумма поддерева: " + root.maxSum());
+        System.out.println("Максимальный путь: " + root.maxPath());
+        System.out.println(root.toDot());
     }
 }
