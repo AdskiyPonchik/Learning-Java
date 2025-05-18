@@ -108,19 +108,13 @@ public class ExpressionParser2 extends ExpressionParser {
 
   /** test and example for usage */
   public static void main(String[] args) {
-
     String input=(args.length>0) ? args[0] : "a*b*c";
-
     System.out.println("input = '"+input+"'");
-
     ExpressionParser2 p=new ExpressionParser2();
     p.setVerbose(true);
     ExpressionTree tree=p.parse(input);
-
     System.out.println("output = '"+tree+"'");
-
     System.out.println(tree.postorder().toString());
-
     System.out.println(tree.toTikZ());
   }
 }
