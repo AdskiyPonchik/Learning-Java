@@ -1,4 +1,4 @@
-package aud;
+package aud.list;
 //package Stack_Pali;
 
 public class TPalindrome {

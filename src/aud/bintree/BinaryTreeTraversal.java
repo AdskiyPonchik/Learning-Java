@@ -1,4 +1,7 @@
-package aud;
+package aud.bintree;
+
+import aud.queue.Queue;
+import aud.list.Stack;
 
 import java.util.Iterator;
 
@@ -7,7 +10,7 @@ import java.util.Iterator;
     Defines iterators and classes generating iterators
     for various traversal orders.
 
-    @see aud.BinaryTree
+    @see BinaryTree
     @see aud.example.BinaryTreeTraversal example.BinaryTreeTraversal
     (recursive traversion demo)
  */

@@ -1,7 +1,7 @@
 package aud.example.expr;
 
 import aud.util.*;
-import aud.Queue;
+import aud.queue.Queue;
 
 /** example: visualize expression tree traversal */
 public class ExpressionTreeTraversal extends SingleStepper {

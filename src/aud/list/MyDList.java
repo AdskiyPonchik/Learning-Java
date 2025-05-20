@@ -1,4 +1,6 @@
-package aud;
+package aud.list;
+
+import aud.list.DList;
 
 public class MyDList<T> extends DList<T> {
     //-----------------------------------------------------------------//

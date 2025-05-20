@@ -1,5 +1,5 @@
 // package aud.adt;
-package aud;
+package aud.queue;
 
 import java.util.NoSuchElementException;
 

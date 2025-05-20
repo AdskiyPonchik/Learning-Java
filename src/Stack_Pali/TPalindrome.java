@@ -1,6 +1,6 @@
 package Stack_Pali;
 
-//import aud.Stack;
+//import aud.list.Stack;
 
 public class TPalindrome {
     // Test if text is a T-palindrome.

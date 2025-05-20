@@ -1,4 +1,5 @@
-package aud;
+package aud.bintree;
+import aud.list.Stack;
 import aud.util.Graphvizable;
 import aud.util.GraphvizDecorable;
 import aud.util.GraphvizDecorator;
@@ -11,14 +12,14 @@ import aud.util.Sys;
  * simultaneously its <em>subtree</em>. We do not explclitly
  * distinguish between nodes and a (rooted) tree.<p>
  * <p>
- * Used for demos (e.g., {@link aud.example.BinaryTreeTraversal}) and
+ * Used for demos (e.g., {@link aud.bintree.BinaryTreeTraversal}) and
  * as base class for various binary trees.
  * <p>
  * For every node, we store an uplink to its parent, see
  * {@link #getParent}.
  *
- * @see aud.BinaryTreeTraversal BinaryTreeTraversal (iterators)
- * @see aud.example.BinaryTreeTraversal example.BinaryTreeTraversal
+ * @see BinaryTreeTraversal BinaryTreeTraversal (iterators)
+ * @see aud.bintree.BinaryTreeTraversal example.BinaryTreeTraversal
  * (recursive traversal demo)
  */
 public class BinaryTree<T>
@@ -199,7 +200,7 @@ public class BinaryTree<T>
      * Get string presentation of node data.<p>
      * This method only encodes the node's <em>content</em>
      * as string, it does <em>not</em> encode the entire tree!
-     * (This makes it easier to, e.g., print out a {@link Stack}
+     * (This makes it easier to, e.g., print out a {@link aud.list.Stack}
      * of nodes.)
      *
      * @return {@link #getData}{@code .toString}
@@ -303,7 +304,7 @@ public class BinaryTree<T>
     }
 
     /**
-     * recursive, called by {@link toText}
+     * recursive, called by {@link this.toText}
      */
     private String toText(int level) {
         String text = "";

@@ -1,4 +1,4 @@
-package aud;
+package aud.bintree;
 
 //-----------------------------------------------------------------//
 public class SimpleTree<T extends Comparable<T>> {

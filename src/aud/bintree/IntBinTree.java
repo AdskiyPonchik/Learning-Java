@@ -1,9 +1,4 @@
-package aud;
-
-import aud.*;               //to use BinaryTree<T>
-import aud.util.*;          //to use DotViewer, SingleStepper
-
-import java.util.Iterator;
+package aud.bintree;
 
 public class IntBinTree extends BinaryTree<Integer> {
     //---------------------------------------------------------------//

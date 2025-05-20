@@ -1,4 +1,4 @@
-package aud;
+package aud.bintree;
 
 import aud.util.Graphvizable;
 import aud.util.GraphvizDecorable;
@@ -12,8 +12,8 @@ import aud.util.GraphvizDecorator;
 
     <h2>Nodes</h2>
 
-    The internal node (nested class {@link aud.BinarySearchTree.Node})
-    representation is based on {@link aud.BinaryTree}!<p>
+    The internal node (nested class {@link BinarySearchTree.Node})
+    representation is based on {@link BinaryTree}!<p>
 
     On the one hand, this choice enables us to reuse functionality. On
     the other hand, there are some <em>disadvantages</em> due to extra
@@ -25,16 +25,16 @@ import aud.util.GraphvizDecorator;
 
     This implementation does <em>not</em> use dummy nodes as leaves!
 
-    Note that {@link aud.BinaryTree#getLeft} and
-    {@link aud.BinaryTree#getRight} also update links to parents! While
+    Note that {@link BinaryTree#getLeft} and
+    {@link BinaryTree#getRight} also update links to parents! While
     this is convenient in many cases, it requires special care in other
     cases! (Explicitly setting {@code null} references, order of
     operations matters "even more".)
 
     <h2>Nodes store key-value pairs</h2>
 
-    Each {@link aud.BinarySearchTree.Node} stores a <em>key-value</em>
-    pair of type {@link aud.BinarySearchTree.Entry} as node data.
+    Each {@link BinarySearchTree.Node} stores a <em>key-value</em>
+    pair of type {@link BinarySearchTree.Entry} as node data.
 
     {@link BinarySearchTree} is a
     <a href="http://docs.oracle.com/javase/tutorial/java/generics/types.html">
@@ -71,16 +71,16 @@ import aud.util.GraphvizDecorator;
     The core function used for finding ({@link #find}) a node by
     key <em>and also </em> for finding an insertion point (for
     {@link #insert}) is {@link #findLowerBound}). It returns a
-    {@link aud.BinarySearchTree.LowerBound} instance (which stores
+    {@link BinarySearchTree.LowerBound} instance (which stores
     the node and some additional information).
 
     <h4>High-level implementation: cursors and iterators</h4>
 
     The method {@link #findEntry} (and similarly {@link #getMinimum} and
-    {@link #getMaximum}) returns a {@link aud.BinarySearchTree.Cursor}
+    {@link #getMaximum}) returns a {@link BinarySearchTree.Cursor}
     rather than a node.
 
-    {@link aud.BinarySearchTree.Cursor} provides a reference to nodes
+    {@link BinarySearchTree.Cursor} provides a reference to nodes
     in the tree, i.e., allows access to its key and value.
 
     The {@code iterator()} method implements {@code Iterable<Cursor>},

@@ -1,6 +1,6 @@
-package aud;
+package aud.bintree;
 import aud.util.DotViewer;
-import aud.BinaryTree;
+
 import javax.swing.*;
 
 public class BuildBinTree {

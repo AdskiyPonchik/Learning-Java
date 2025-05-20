@@ -1,4 +1,6 @@
-package aud;
+package aud.list;
+import aud.list.SList;
+
 import java.util.function.Predicate;
 // This class "wraps" an instance of `SList<Integer>` (attribute
 // `li`): Calls to `toString()` and `push_front()` are "delegated" to

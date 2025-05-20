@@ -1,4 +1,4 @@
-package aud;//package Filter;
+package aud.list;//package Filter;
 
 public class LinkedNode<T> {
     T data_ = null;

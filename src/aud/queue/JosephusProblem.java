@@ -1,4 +1,4 @@
-package aud;
+package aud.queue;
 
 public class JosephusProblem {
 

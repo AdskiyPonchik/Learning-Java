@@ -1,8 +1,6 @@
-package aud;
-import aud.*;
+package aud.bintree;
 import aud.example.expr.*;
 import aud.example.expr.Number;
-import aud.util.*;
 
 //-----------------------------------------------------------------//
 /**Class which is able the compute the derivative of a given

@@ -78,7 +78,7 @@ public class Sys {
       this.envvar=envvar;
       this.guess=guess;
 
-      aud.Vector<String> paths=new aud.Vector<String>();
+      Vector<String> paths=new Vector<String>();
 
       if (envvar!=null)
         paths.push_back(env(envvar));

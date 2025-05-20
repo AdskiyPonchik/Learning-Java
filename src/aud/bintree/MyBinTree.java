@@ -1,8 +1,7 @@
-package aud;
+package aud.bintree;
 
-import aud.util.*;        //to use DotViewer, SingleStepper
-import aud.BinaryTree;    //to use BinaryTree<T>
-import aud.Queue;         //to use Queue<T>
+import aud.queue.Queue;
+
 
 //------------------------------------------------------------------//
 public class MyBinTree<T> extends BinaryTree<T> {

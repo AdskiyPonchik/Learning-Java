@@ -1,8 +1,8 @@
-package aud;
+package aud.bintree;
 
 import aud.example.expr.*; 
 import aud.util.*;
-import aud.Queue;
+import aud.queue.Queue;
 import javax.swing.*;
 
 //-----------------------------------------------------------------//

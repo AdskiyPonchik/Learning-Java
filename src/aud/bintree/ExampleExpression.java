@@ -1,4 +1,4 @@
-package aud;
+package aud.bintree;
 import aud.example.expr.ExpressionParser;
 import aud.example.expr.ExpressionTree;
 import aud.example.expr.Number;

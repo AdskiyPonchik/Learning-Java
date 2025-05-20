@@ -1,6 +1,6 @@
 package aud.example.expr;
 
-import aud.Queue;
+import aud.queue.Queue;
 
 /** Same as {@link ExpressionParser} but using modified grammar to provide
     the usual <b>left-associative</b> expressions.<p>

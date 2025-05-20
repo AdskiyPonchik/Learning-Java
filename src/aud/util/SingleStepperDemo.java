@@ -1,13 +1,13 @@
 package aud.util;
 
-import aud.DList;
+import aud.list.DList;
 
 /** Demonstrate use of SingleStepper
  */
 public class SingleStepperDemo extends SingleStepper {
 
-  protected DList<?>       list = null;
-  protected DotViewer      v    = DotViewer.displayWindow((String) null,
+  protected DList<?> list = null;
+  protected DotViewer v = DotViewer.displayWindow((String) null,
                                                        "aud.util.GraphDemo");
 
   SingleStepperDemo(DList<?> list) {

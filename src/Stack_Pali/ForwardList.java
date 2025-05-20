@@ -1,5 +1,5 @@
 package Stack_Pali;
-//import aud.Stack;
+//import aud.list.Stack;
 public class ForwardList<T> implements Iterable<T>{
     //-----------------------------------------------------------------//
     //------------- !!Do not change the following lines!! -------------//

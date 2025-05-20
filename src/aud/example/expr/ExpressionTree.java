@@ -1,6 +1,6 @@
 package aud.example.expr;
 
-import aud.BinaryTree;
+import aud.bintree.BinaryTree;
 import aud.util.GraphvizDecorator;
 import aud.util.SimpleDecorator;
 

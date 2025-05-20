@@ -1,6 +1,9 @@
-package aud;// package aud;
+package aud.list;// package aud;
 
 // import aud.adt.AbstractStack;
+
+import aud.util.Vector;
+
 import java.util.NoSuchElementException;
 /** Implementation of a stack based on {@link Vector}.
  */

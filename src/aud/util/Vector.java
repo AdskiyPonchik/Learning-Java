@@ -1,4 +1,4 @@
-package aud;
+package aud.util;
 
 /**
  * Implementation of an array-based vector.

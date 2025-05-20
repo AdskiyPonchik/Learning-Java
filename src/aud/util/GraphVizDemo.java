@@ -1,6 +1,6 @@
 package aud.util;
 
-import aud.DList;
+import aud.list.DList;
 
 /** Simple demo to test use of GraphViz/Batik.
  */

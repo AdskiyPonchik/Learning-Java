@@ -5,7 +5,7 @@ package Stack_Pali;
 // import aud.adt.AbstractStack;
 import java.util.NoSuchElementException;
 
-/** Implementation of a stack based on {@link aud.Vector}.
+/** Implementation of a stack based on {@link Vector}.
  */
 public class Stack<T> extends AbstractStack<T> {
     Vector<T> data_;

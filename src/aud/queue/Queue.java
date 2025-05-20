@@ -1,7 +1,7 @@
 // package aud;
 
 // import aud.adt.AbstractQueue;
-package aud;
+package aud.queue;
 import java.util.NoSuchElementException;
 
 /**
