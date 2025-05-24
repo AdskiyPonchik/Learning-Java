@@ -1,9 +1,9 @@
-package aud;
+package aud.bintree;
 
 import aud.util.SingleStepper;
 import aud.util.DotViewer;
-import aud.AVLTree;
-import aud.BinarySearchTree;
+import aud.bintree.AVLTree;
+import aud.bintree.BinarySearchTree;
 
 public class RedBlackExample {
 

@@ -55,7 +55,7 @@ public class ExprWithPow extends ExpressionParser2 {
     //----------------------------------------------------------------//
     public static void main(String[] args) {
         // TODO: test your code with appropriate examples
-        String input = (args.length > 0) ? args[0] : "3*2^(1+2)";
+        String input = "3*2^(1+2)";
 
         ExprWithPow parser = new ExprWithPow();
         parser.setVerbose(true);
