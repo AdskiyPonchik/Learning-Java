@@ -1,4 +1,4 @@
-package aud.graph;
+package aud.graphen.tasks;
 import java.util.*;
 
 public class AdjMatrix {
