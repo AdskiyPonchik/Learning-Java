@@ -1,10 +1,6 @@
 package aud.graphen.tasks;
-import aud.graphen.example.graph.MyNode;
-import aud.graphen.example.graph.MyGraph;
-import aud.graphen.example.graph.MyEdge;
-import aud.graphen.example.graph.PrimMinimumSpanningTree;
-import aud.graphen.example.graph.TraversalExample;
-import aud.graphen.example.graph.Traversal;
+import aud.graphen.example.graph.*;
+import aud.graphen.example.graph.*;
 import aud.util.SimpleDecorator;
 
 public class MSTPrimDemo {
@@ -20,7 +16,7 @@ public class MSTPrimDemo {
         e = g.addEdge(nodes[0], nodes[1]); e.setWeight(2.0); // 0–1
         e = g.addEdge(nodes[0], nodes[2]); e.setWeight(5.0); // 0–2
         e = g.addEdge(nodes[0], nodes[3]); e.setWeight(3.0); // 0–3
-        e = g.addEdge(nodes[1], nodes[3]); e.setWeight(4.0); // 1–3
+        e = g.addEdge(nodes[1], nodes[5]); e.setWeight(4.0); // 1–3
         e = g.addEdge(nodes[2], nodes[3]); e.setWeight(1.0); // 2–3
         e = g.addEdge(nodes[2], nodes[4]); e.setWeight(7.0); // 2–4
         e = g.addEdge(nodes[3], nodes[5]); e.setWeight(6.0); // 3–5
